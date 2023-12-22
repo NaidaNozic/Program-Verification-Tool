@@ -1,0 +1,10 @@
+function test3(int a)
+precondition a >= 10
+postcondition a == 0
+{
+    while(a > 0)
+    invariant a > 1
+    {
+        a = a - 1;
+    }
+}

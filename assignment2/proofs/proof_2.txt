@@ -1,0 +1,17 @@
+function proof2(int[] a, int l)
+precondition l > 10 && (forall i: (i >= 0 && i < l) ==> (a[i] == 0))
+postcondition (forall i: (0 <= i && i < l && i < 5) ==> (a[i] == 1)) && (forall i: (0 <= i && i < l && i >= 5) ==> (a[i] == 2))
+{
+    count = 0;
+    while (count < l)
+    invariant (forall i: (0 <= i && i < count && i < 5) ==> (a[i] == 1)) && (forall i: (0 <= i && i < count && i >= 5) ==> (a[i] == 2))
+    decreases l - count
+    {
+        if (count < 5) {
+            a[count] = 1;
+        } else {
+            a[count] = 2;
+        }
+        count = count + 1;
+    }
+}

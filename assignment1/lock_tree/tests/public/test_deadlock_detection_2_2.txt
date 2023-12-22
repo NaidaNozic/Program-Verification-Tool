@@ -1,0 +1,32 @@
+function testDeadlockDetection12(bool flag) {
+  if (flag) {
+      lockTreeLock(l4);
+      lockTreeLock(l8);
+      lockTreeLock(l2);
+      lockTreeUnlock(l2);
+      lockTreeLock(l5);
+      lockTreeUnlock(l5);
+      lockTreeUnlock(l8);
+      lockTreeUnlock(l4);
+      lockTreeLock(l11);
+      lockTreeLock(l12);
+      lockTreeLock(l13);
+      lockTreeLock(l14);
+      lockTreeLock(l15);
+      lockTreeUnlock(l15);
+      lockTreeLock(l16);
+      lockTreeUnlock(l16);
+      lockTreeUnlock(l14);
+      lockTreeUnlock(l13);
+      lockTreeUnlock(l12);
+      lockTreeUnlock(l11);
+      lockTreeLock(l17);
+      lockTreeLock(l18);
+      lockTreeUnlock(l18);
+      lockTreeLock(l19);
+      lockTreeUnlock(l19);
+      lockTreeUnlock(l17);
+  }
+}
+
+testDeadlockDetection12(true);

@@ -1,0 +1,15 @@
+function test13(int x, int y)
+precondition x > 0 && y > 0
+postcondition x > 10
+{
+    if (x < 5) {
+        if (y > 3){
+            x = x + y;
+        } else {
+            x = x - y;
+        }
+        y = y * 2;
+    } else {
+        x = x * 2;
+    }
+}

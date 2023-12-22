@@ -1,0 +1,11 @@
+function testInstrumentation1() {
+  count = 2;
+  l1.lock;
+  l1.unlock;
+  while(count > 0) {
+    l2.lock;
+    count = count - 1;
+    l2.unlock;
+  }
+}
+testInstrumentation1();

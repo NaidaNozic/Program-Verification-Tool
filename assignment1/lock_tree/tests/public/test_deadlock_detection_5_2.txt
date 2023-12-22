@@ -1,0 +1,12 @@
+function testDeadlockDetection12(bool flag) {
+  if (flag) {
+      lockTreeLock(l1);
+      lockTreeLock(l3);
+      lockTreeLock(l2);
+      lockTreeUnlock(l2);
+      lockTreeUnlock(l3);
+      lockTreeUnlock(l1);
+  }
+}
+
+testDeadlockDetection12(true);

@@ -1,0 +1,7 @@
+function test8(int a)
+precondition a > 5
+postcondition a == 0
+{
+    a = 0;
+    assert(a == 1);
+}

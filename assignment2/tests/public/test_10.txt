@@ -1,0 +1,15 @@
+function test10(int a)
+precondition a > 10
+postcondition a == 0
+{
+    assert(a > 5);
+    while(a > 0)
+    invariant a >= 0
+    decreases a
+    {
+        assert(a > 0);
+        a = a - 1;
+        assert(a >= 0);
+    }
+    assert(a >= 0);
+}

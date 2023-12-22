@@ -1,0 +1,12 @@
+function testConstruction1() {
+  count = 2;
+  lockTreeLock(l1);
+  while(count > 0) {
+    lockTreeLock(l2);
+    count = count - 1;
+    lockTreeUnlock(l2);
+  }
+  lockTreeUnlock(l1);
+}
+
+testConstruction1();

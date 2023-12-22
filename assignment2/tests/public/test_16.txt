@@ -1,0 +1,11 @@
+function test16( int a)
+precondition a > 5
+postcondition a == 1
+{
+    while (a > 0)
+    invariant a >= 1
+    {
+        a = a - 1;
+    }
+    a = a + 1;
+}

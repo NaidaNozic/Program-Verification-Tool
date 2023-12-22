@@ -1,0 +1,6 @@
+function testConstruction3() {
+    lockTreeLock(l1);
+    lockTreeLock(l2);
+    lockTreeUnlock(l1);
+}
+testConstruction3();

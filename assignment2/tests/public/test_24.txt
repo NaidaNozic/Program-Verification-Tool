@@ -1,0 +1,13 @@
+function test24(int[] a, int l)
+precondition forall i: (i >= 0 && i < l) ==> (a[i] > 0)
+postcondition forall i: (i >= 0 && i < l) ==> (a[i] == 0)
+{
+    count = 0;
+    while (count < l)
+    invariant forall i: (i >= 0 && i < count) ==> (a[i] == 0)
+    decreases l - count
+    {
+        a[count] = 0;
+        count = count + 1;
+    }
+}

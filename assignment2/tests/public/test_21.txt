@@ -1,0 +1,6 @@
+function test21(int[] a , int l)
+precondition l > 5 && forall i:(i >= 0 && i < l) ==> (a[i] > 0)
+postcondition exists i: i >=0 && i < l && a[i] == 0
+{
+    a[5] = 0;
+}

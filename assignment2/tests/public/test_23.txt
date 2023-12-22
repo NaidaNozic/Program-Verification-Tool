@@ -1,0 +1,9 @@
+function test23(int a)
+precondition a > 0 && a < 10
+postcondition a == -1
+{
+    if (a > 0){
+        a = 0;
+    }
+    a = a - 1;
+}

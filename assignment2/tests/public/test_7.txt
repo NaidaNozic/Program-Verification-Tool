@@ -1,0 +1,12 @@
+function test7(int a, int b)
+precondition a > 5 && b == a
+postcondition a == 0
+{
+    while(a > 0 && b > 0)
+    invariant a >= 0 && b >= 0 && b == a
+    decreases a - b
+    {
+        a = a - 1;
+        b = b - 1;
+    }
+}

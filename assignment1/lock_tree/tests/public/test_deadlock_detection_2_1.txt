@@ -1,0 +1,24 @@
+function testDeadlockDetection11() {
+  lockTreeLock(l1);
+  lockTreeLock(l2);
+  lockTreeLock(l3);
+  lockTreeUnlock(l3);
+  lockTreeLock(l4);
+  lockTreeUnlock(l4);
+  lockTreeUnlock(l2);
+  lockTreeUnlock(l1);
+  lockTreeLock(l5);
+  lockTreeLock(l8);
+  lockTreeUnlock(l8);
+  lockTreeUnlock(l5);
+  lockTreeLock(l16);
+  lockTreeLock(l15);
+  lockTreeLock(l13);
+  lockTreeLock(l12);
+  lockTreeUnlock(l12);
+  lockTreeUnlock(l13);
+  lockTreeUnlock(l15);
+  lockTreeUnlock(l16);
+}
+
+testDeadlockDetection11();

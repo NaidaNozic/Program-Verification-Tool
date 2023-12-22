@@ -1,0 +1,7 @@
+function test1(int a, bool b)
+precondition a >= 0
+postcondition a > 0 && !b
+{
+    a = a + 1;
+    b = true;
+}

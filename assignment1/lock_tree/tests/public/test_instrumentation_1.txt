@@ -1,0 +1,6 @@
+function testInstrumentation1() {
+  l1.lock;
+  l1.unlock;
+}
+testInstrumentation1();
+

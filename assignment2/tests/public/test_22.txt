@@ -1,0 +1,17 @@
+function proof3(int a)
+precondition a > 5
+postcondition a == 2 && i == 0
+{
+    i = 3;
+    while (a > 0 && i > 0)
+    invariant (a==1 && i>=0 && i<=3) || (a>=2 && i==3)
+    decreases a + i
+    {
+        if (a > 1) {
+            a = a - 1;
+        } else {
+            i = i - 1;
+        }
+    }
+    a = a + 1;
+}

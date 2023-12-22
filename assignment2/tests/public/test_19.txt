@@ -1,0 +1,6 @@
+function test19(int[] a)
+precondition a[0] == 0
+postcondition a[0] > 0
+{
+    a[0] = -1;
+}

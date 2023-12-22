@@ -1,0 +1,12 @@
+function test5(int a)
+precondition a > 5
+postcondition a == 0
+{
+    b = 5;
+    while(a > 0)
+    invariant a >= 0
+    decreases b
+    {
+        a = a - 1;
+    }
+}

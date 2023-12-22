@@ -1,0 +1,15 @@
+function test17(int a, int b)
+precondition a > 10 && b > 5
+postcondition a == 0
+{
+    while(a > 0 && b > 0)
+    invariant a >= 0
+    {
+        while(a > 0)
+        invariant a > 1
+        {
+            a = a - 1;
+        }
+        a = a - 1;
+    }
+}

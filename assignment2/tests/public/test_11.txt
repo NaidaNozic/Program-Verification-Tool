@@ -1,0 +1,11 @@
+function test11(int a)
+precondition a > 0 && a < 10
+postcondition a < 0
+{
+    if (a > 0){
+        a = 0;
+    } else {
+        a = 1;
+    }
+    a = a - 1;
+}

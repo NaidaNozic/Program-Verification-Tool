@@ -1,0 +1,8 @@
+function test20(int[] a, int x, int y, int R)
+precondition a[x] == x && a[y] == y
+postcondition a[x] == y && a[y] == x
+{
+    R = a[x];
+    a[x] = a[y];
+    a[y] = R;
+}
